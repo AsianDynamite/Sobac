@@ -15,6 +15,14 @@
 		3D4DC3851DD6AFB200FD6DC3 /* sobacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3841DD6AFB200FD6DC3 /* sobacUITests.swift */; };
 		3D4DC3931DD6B03300FD6DC3 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3921DD6B03300FD6DC3 /* CircleProgressView.swift */; };
 		3D4DC3951DD6BEBA00FD6DC3 /* frontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3941DD6BEBA00FD6DC3 /* frontVC.swift */; };
+		3D4DC39B1DD90AB100FD6DC3 /* newBACButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC39A1DD90AB100FD6DC3 /* newBACButton.swift */; };
+		3D4DC39F1DD9263000FD6DC3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC39E1DD9263000FD6DC3 /* SearchVC.swift */; };
+		3D4DC3A11DD9266200FD6DC3 /* CocktailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3A01DD9266200FD6DC3 /* CocktailTableVC.swift */; };
+		3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3A21DD926B500FD6DC3 /* FriendTableVC.swift */; };
+		3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3A41DD926CD00FD6DC3 /* FriendCell.swift */; };
+		3D4DC3A71DD926DA00FD6DC3 /* CocktailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */; };
+		3D4DC3AC1DD9275700FD6DC3 /* ManualAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */; };
+		3D4DC3AE1DD9279900FD6DC3 /* BACtrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		3D4DC3861DD6AFB200FD6DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D4DC3921DD6B03300FD6DC3 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		3D4DC3941DD6BEBA00FD6DC3 /* frontVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = frontVC.swift; sourceTree = "<group>"; };
+		3D4DC39A1DD90AB100FD6DC3 /* newBACButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newBACButton.swift; sourceTree = "<group>"; };
+		3D4DC39E1DD9263000FD6DC3 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		3D4DC3A01DD9266200FD6DC3 /* CocktailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableVC.swift; sourceTree = "<group>"; };
+		3D4DC3A21DD926B500FD6DC3 /* FriendTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableVC.swift; sourceTree = "<group>"; };
+		3D4DC3A41DD926CD00FD6DC3 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailCell.swift; sourceTree = "<group>"; };
+		3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualAddVC.swift; sourceTree = "<group>"; };
+		3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BACtrackVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,13 @@
 		3D4DC3631DD6AFB200FD6DC3 /* sobac */ = {
 			isa = PBXGroup;
 			children = (
+				3D4DC3AA1DD9272700FD6DC3 /* BACCalcView */,
+				3D4DC39D1DD9251900FD6DC3 /* cocktailTable */,
+				3D4DC39C1DD9250400FD6DC3 /* friendTable */,
 				3D4DC3921DD6B03300FD6DC3 /* CircleProgressView.swift */,
 				3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */,
 				3D4DC3681DD6AFB200FD6DC3 /* Main.storyboard */,
+				3D4DC39A1DD90AB100FD6DC3 /* newBACButton.swift */,
 				3D4DC3941DD6BEBA00FD6DC3 /* frontVC.swift */,
 				3D4DC36B1DD6AFB200FD6DC3 /* Assets.xcassets */,
 				3D4DC36D1DD6AFB200FD6DC3 /* LaunchScreen.storyboard */,
@@ -126,6 +146,34 @@
 				3D4DC3861DD6AFB200FD6DC3 /* Info.plist */,
 			);
 			path = sobacUITests;
+			sourceTree = "<group>";
+		};
+		3D4DC39C1DD9250400FD6DC3 /* friendTable */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DC3A21DD926B500FD6DC3 /* FriendTableVC.swift */,
+				3D4DC3A41DD926CD00FD6DC3 /* FriendCell.swift */,
+			);
+			name = friendTable;
+			sourceTree = "<group>";
+		};
+		3D4DC39D1DD9251900FD6DC3 /* cocktailTable */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DC39E1DD9263000FD6DC3 /* SearchVC.swift */,
+				3D4DC3A01DD9266200FD6DC3 /* CocktailTableVC.swift */,
+				3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */,
+			);
+			name = cocktailTable;
+			sourceTree = "<group>";
+		};
+		3D4DC3AA1DD9272700FD6DC3 /* BACCalcView */ = {
+			isa = PBXGroup;
+			children = (
+				3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */,
+				3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */,
+			);
+			name = BACCalcView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +311,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4DC3651DD6AFB200FD6DC3 /* AppDelegate.swift in Sources */,
+				3D4DC39F1DD9263000FD6DC3 /* SearchVC.swift in Sources */,
+				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
+				3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */,
+				3D4DC3AE1DD9279900FD6DC3 /* BACtrackVC.swift in Sources */,
 				3D4DC3951DD6BEBA00FD6DC3 /* frontVC.swift in Sources */,
+				3D4DC3A11DD9266200FD6DC3 /* CocktailTableVC.swift in Sources */,
+				3D4DC3AC1DD9275700FD6DC3 /* ManualAddVC.swift in Sources */,
+				3D4DC39B1DD90AB100FD6DC3 /* newBACButton.swift in Sources */,
 				3D4DC3931DD6B03300FD6DC3 /* CircleProgressView.swift in Sources */,
+				3D4DC3A71DD926DA00FD6DC3 /* CocktailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +565,7 @@
 				3D4DC38B1DD6AFB200FD6DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D4DC38C1DD6AFB200FD6DC3 /* Build configuration list for PBXNativeTarget "sobacTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +574,7 @@
 				3D4DC38E1DD6AFB200FD6DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D4DC38F1DD6AFB200FD6DC3 /* Build configuration list for PBXNativeTarget "sobacUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +583,7 @@
 				3D4DC3911DD6AFB200FD6DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
