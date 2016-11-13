@@ -191,7 +191,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pE-x0-sMo" id="nHt-7q-xfa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -221,7 +221,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9s-8i-YkH" id="hvg-uu-lFG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -250,11 +250,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXf-M8-jTA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXf-M8-jTA">
                                 <rect key="frame" x="0.0" y="629" width="375" height="38"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.2784313725" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="bIU-VX-hPT"/>
+                                    <constraint firstAttribute="height" constant="38" id="tNq-sf-at4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Search!">
@@ -273,6 +273,11 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TpU-Md-vSx" firstAttribute="top" secondItem="aXf-M8-jTA" secondAttribute="bottom" id="EuN-Fv-rcG"/>
+                            <constraint firstItem="aXf-M8-jTA" firstAttribute="leading" secondItem="czI-ch-Tu4" secondAttribute="leading" id="LFM-ey-Vro"/>
+                            <constraint firstAttribute="trailing" secondItem="aXf-M8-jTA" secondAttribute="trailing" id="wyu-kF-csJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="o1q-mH-zHi"/>
                 </viewController>
