@@ -23,8 +23,8 @@
 		3D4DC3A71DD926DA00FD6DC3 /* CocktailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */; };
 		3D4DC3AC1DD9275700FD6DC3 /* ManualAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */; };
 		3D4DC3AE1DD9279900FD6DC3 /* BACtrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */; };
-		3DCA43AE1DD957F100F78340 /* leftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43AD1DD957F100F78340 /* leftSegue.swift */; };
-		3DCA43B01DD957FD00F78340 /* rightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43AF1DD957FD00F78340 /* rightSegue.swift */; };
+		3DADE1011DD96C3B0035AFD8 /* leftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADE0FF1DD96C3B0035AFD8 /* leftSegue.swift */; };
+		3DADE1021DD96C3B0035AFD8 /* rightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */; };
 		3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B31DD9670D00F78340 /* upSegue.swift */; };
 		3DCA43B61DD9671600F78340 /* downSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B51DD9671600F78340 /* downSegue.swift */; };
 /* End PBXBuildFile section */
@@ -69,8 +69,8 @@
 		3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailCell.swift; sourceTree = "<group>"; };
 		3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualAddVC.swift; sourceTree = "<group>"; };
 		3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BACtrackVC.swift; sourceTree = "<group>"; };
-		3DCA43AD1DD957F100F78340 /* leftSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = leftSegue.swift; path = ../leftSegue.swift; sourceTree = "<group>"; };
-		3DCA43AF1DD957FD00F78340 /* rightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = rightSegue.swift; path = ../rightSegue.swift; sourceTree = "<group>"; };
+		3DADE0FF1DD96C3B0035AFD8 /* leftSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = leftSegue.swift; sourceTree = "<group>"; };
+		3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rightSegue.swift; sourceTree = "<group>"; };
 		3DCA43B31DD9670D00F78340 /* upSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upSegue.swift; sourceTree = "<group>"; };
 		3DCA43B51DD9671600F78340 /* downSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = downSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,8 +186,8 @@
 		3DCA43B11DD9584D00F78340 /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
-				3DCA43AD1DD957F100F78340 /* leftSegue.swift */,
-				3DCA43AF1DD957FD00F78340 /* rightSegue.swift */,
+				3DADE0FF1DD96C3B0035AFD8 /* leftSegue.swift */,
+				3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */,
 				3DCA43B31DD9670D00F78340 /* upSegue.swift */,
 				3DCA43B51DD9671600F78340 /* downSegue.swift */,
 			);
@@ -346,9 +346,9 @@
 				3D4DC3AE1DD9279900FD6DC3 /* BACtrackVC.swift in Sources */,
 				3D4DC3951DD6BEBA00FD6DC3 /* frontVC.swift in Sources */,
 				3DCA43B61DD9671600F78340 /* downSegue.swift in Sources */,
-				3DCA43AE1DD957F100F78340 /* leftSegue.swift in Sources */,
-				3DCA43B01DD957FD00F78340 /* rightSegue.swift in Sources */,
+				3DADE1011DD96C3B0035AFD8 /* leftSegue.swift in Sources */,
 				3D4DC3A11DD9266200FD6DC3 /* CocktailTableVC.swift in Sources */,
+				3DADE1021DD96C3B0035AFD8 /* rightSegue.swift in Sources */,
 				3D4DC3AC1DD9275700FD6DC3 /* ManualAddVC.swift in Sources */,
 				3D4DC39B1DD90AB100FD6DC3 /* newBACButton.swift in Sources */,
 				3D4DC3931DD6B03300FD6DC3 /* CircleProgressView.swift in Sources */,
