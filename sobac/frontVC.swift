@@ -14,6 +14,7 @@ class frontVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        gearButton.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +22,9 @@ class frontVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var gearButton: UIButton!
+    @IBOutlet var rightSwipe: UISwipeGestureRecognizer!
+    @IBOutlet var leftSwipe: UISwipeGestureRecognizer!
     @IBOutlet weak var progressCircle: CircleProgressView!
     /*
     // MARK: - Navigation
