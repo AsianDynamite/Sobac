@@ -28,6 +28,7 @@
 		3DADE1021DD96C3B0035AFD8 /* rightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */; };
 		3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B31DD9670D00F78340 /* upSegue.swift */; };
 		3DCA43B61DD9671600F78340 /* downSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B51DD9671600F78340 /* downSegue.swift */; };
+		E84916361DDB82090092A025 /* DrinkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rightSegue.swift; sourceTree = "<group>"; };
 		3DCA43B31DD9670D00F78340 /* upSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upSegue.swift; sourceTree = "<group>"; };
 		3DCA43B51DD9671600F78340 /* downSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = downSegue.swift; sourceTree = "<group>"; };
+		E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				3D4DC39E1DD9263000FD6DC3 /* SearchVC.swift */,
 				3D4DC3A01DD9266200FD6DC3 /* CocktailTableVC.swift */,
 				3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */,
+				E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */,
 			);
 			name = cocktailTable;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84916361DDB82090092A025 /* DrinkDetailsViewController.swift in Sources */,
 				3D4DC3651DD6AFB200FD6DC3 /* AppDelegate.swift in Sources */,
 				3D4DC39F1DD9263000FD6DC3 /* SearchVC.swift in Sources */,
 				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
@@ -509,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = sobac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PorterDJ1.sobac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = sobac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PorterDJ1.sobac;
 				PRODUCT_NAME = "$(TARGET_NAME)";

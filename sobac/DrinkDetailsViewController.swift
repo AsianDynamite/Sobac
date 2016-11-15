@@ -1,19 +1,15 @@
 //
-//  SearchVC.swift
+//  DrinkDetailsViewController.swift
 //  sobac
 //
-//  Created by Daniel Porter on 11/13/16.
+//  Created by Nate Henry on 11/15/16.
 //  Copyright © 2016 Daniel Porter. All rights reserved.
 //
 
 import UIKit
 
-class SearchVC: UIViewController {
+class DrinkDetailsViewController: UIViewController {
 
-    @IBOutlet weak var nameSwitch: UISwitch!
-    @IBOutlet weak var ingredientSwitch: UISwitch!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
