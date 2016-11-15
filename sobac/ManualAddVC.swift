@@ -11,6 +11,15 @@ import UIKit
 class ManualAddVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     let pickOptions = ["0", "1", "2", "3", "4", "5", "6", "7"]
+    
+    //Widmark's Formula
+    //% BAC = (A x 5.14 / W x r) – .015 x H
+    var A = 0.0 //Liquid ounces of alcohol consumed
+    var W = 0.0 //Person's weight in pounds
+    var r = [0.73, 0.66] //A gender constant of alcohol distribution (.73 for men and .66 for women)
+    var H = 0.0 // Hours elapsed since drinking commenced
+    
+    var BAC = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +35,8 @@ class ManualAddVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
         addButton.layer.cornerRadius = 5
         cancelButton.layer.cornerRadius = 5
+        
+        BAC = (A * 5.14 / W * r[1]) - 0.015 * H
     }
 
     override func didReceiveMemoryWarning() {
