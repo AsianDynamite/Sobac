@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2026DA1DDBA4B2003987B4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */; };
 		3D4DC3651DD6AFB200FD6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */; };
 		3D4DC36A1DD6AFB200FD6DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DC3681DD6AFB200FD6DC3 /* Main.storyboard */; };
 		3D4DC36C1DD6AFB200FD6DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DC36B1DD6AFB200FD6DC3 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		3D4DC3611DD6AFB200FD6DC3 /* sobac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sobac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4DC3691DD6AFB200FD6DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				3D4DC3921DD6B03300FD6DC3 /* CircleProgressView.swift */,
 				3D4DC39A1DD90AB100FD6DC3 /* newBACButton.swift */,
 				3D4DC3941DD6BEBA00FD6DC3 /* frontVC.swift */,
+				3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */,
 			);
 			name = FrontPage;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
 				3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */,
 				3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */,
+				3D2026DA1DDBA4B2003987B4 /* SettingsVC.swift in Sources */,
 				3D4DC3AE1DD9279900FD6DC3 /* BACtrackVC.swift in Sources */,
 				3D4DC3951DD6BEBA00FD6DC3 /* frontVC.swift in Sources */,
 				3DCA43B61DD9671600F78340 /* downSegue.swift in Sources */,
