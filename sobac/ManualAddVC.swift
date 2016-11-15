@@ -38,10 +38,6 @@ class ManualAddVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
         BAC = (A * 5.14 / W * r[1]) - 0.015 * H
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
