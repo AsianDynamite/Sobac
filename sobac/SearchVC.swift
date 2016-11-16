@@ -2,8 +2,8 @@
 //  SearchVC.swift
 //  sobac
 //
-//  Created by Daniel Porter on 11/13/16.
-//  Copyright © 2016 Daniel Porter. All rights reserved.
+//  Created by Nate Henry on 11/13/16.
+//  Copyright © 2016 Nate Henry. All rights reserved.
 //
 
 import UIKit
@@ -55,7 +55,7 @@ class SearchVC: UIViewController {
             let child = (segue.destination as! CocktailTableVC)
         
         
-            child.seachString = searchTextLabel.text
+            child.searchString = searchTextLabel.text
         
             if(nameSwitch.isOn){
                 child.nameSearch = true

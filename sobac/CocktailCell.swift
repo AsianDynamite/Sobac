@@ -2,8 +2,8 @@
 //  CocktailCell.swift
 //  sobac
 //
-//  Created by Daniel Porter on 11/13/16.
-//  Copyright © 2016 Daniel Porter. All rights reserved.
+//  Created by Nate Henry on 11/13/16.
+//  Copyright © 2016 Nate Henry. All rights reserved.
 //
 
 import UIKit

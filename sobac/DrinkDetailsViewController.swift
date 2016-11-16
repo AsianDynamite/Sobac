@@ -3,12 +3,14 @@
 //  sobac
 //
 //  Created by Nate Henry on 11/15/16.
-//  Copyright © 2016 Daniel Porter. All rights reserved.
+//  Copyright © 2016 Nate Henry. All rights reserved.
 //
 
 import UIKit
 
 class DrinkDetailsViewController: UIViewController {
+    
+    var drinkID : String!
 
     @IBOutlet weak var drinkWebView: UIWebView!
     
@@ -16,6 +18,9 @@ class DrinkDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let url = URL(string: "http://www.thecocktaildb.com/drink.php?c=" + drinkID!)
+        let request = URLRequest(url : url!)
+        drinkWebView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {

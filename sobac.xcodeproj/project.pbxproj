@@ -33,6 +33,9 @@
 		E84916381DDC020F0092A025 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916371DDC020F0092A025 /* FriendRepository.swift */; };
 		E849163A1DDC02180092A025 /* FriendClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916391DDC02180092A025 /* FriendClass.swift */; };
 		E849163C1DDC02270092A025 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849163B1DDC02270092A025 /* FriendVC.swift */; };
+		E84916411DDC087E0092A025 /* drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916401DDC087E0092A025 /* drinks.swift */; };
+		E84916431DDC0F5E0092A025 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916421DDC0F5E0092A025 /* TestOperation.swift */; };
+		E84916451DDC27370092A025 /* drinks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E84916441DDC27370092A025 /* drinks.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		E84916371DDC020F0092A025 /* FriendRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		E84916391DDC02180092A025 /* FriendClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendClass.swift; sourceTree = "<group>"; };
 		E849163B1DDC02270092A025 /* FriendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
+		E84916401DDC087E0092A025 /* drinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinks.swift; sourceTree = "<group>"; };
+		E84916421DDC0F5E0092A025 /* TestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOperation.swift; sourceTree = "<group>"; };
+		E84916441DDC27370092A025 /* drinks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drinks.jpg; path = ../drinks.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 		3D4DC3631DD6AFB200FD6DC3 /* sobac */ = {
 			isa = PBXGroup;
 			children = (
+				E84916441DDC27370092A025 /* drinks.jpg */,
 				E849163F1DDC02850092A025 /* FriendView */,
 				E849163D1DDC02330092A025 /* Repositories */,
 				3DCA43B21DD9586700F78340 /* FrontPage */,
@@ -184,6 +191,8 @@
 			children = (
 				3D4DC39E1DD9263000FD6DC3 /* SearchVC.swift */,
 				3D4DC3A01DD9266200FD6DC3 /* CocktailTableVC.swift */,
+				E84916421DDC0F5E0092A025 /* TestOperation.swift */,
+				E84916401DDC087E0092A025 /* drinks.swift */,
 				3D4DC3A61DD926DA00FD6DC3 /* CocktailCell.swift */,
 				E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */,
 			);
@@ -345,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84916451DDC27370092A025 /* drinks.jpg in Resources */,
 				3D4DC36F1DD6AFB200FD6DC3 /* LaunchScreen.storyboard in Resources */,
 				3D4DC36C1DD6AFB200FD6DC3 /* Assets.xcassets in Resources */,
 				3D4DC36A1DD6AFB200FD6DC3 /* Main.storyboard in Resources */,
@@ -374,6 +384,8 @@
 			files = (
 				E84916361DDB82090092A025 /* DrinkDetailsViewController.swift in Sources */,
 				3D4DC3651DD6AFB200FD6DC3 /* AppDelegate.swift in Sources */,
+				E84916431DDC0F5E0092A025 /* TestOperation.swift in Sources */,
+				E84916411DDC087E0092A025 /* drinks.swift in Sources */,
 				3D4DC39F1DD9263000FD6DC3 /* SearchVC.swift in Sources */,
 				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
 				3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */,
