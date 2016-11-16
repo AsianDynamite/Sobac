@@ -13,6 +13,7 @@ class SettingsVC: UIViewController {
     let limitWarnings = [["•Average individual appears normal"], ["•Decreased inhibition", "•Mild euphoria", "•Loss of concentration"], ["•Blunted feelings", "•Reduced sensitivity to pain", "•Extroversion", "•Loss of Reasoning", "•Loss of Depth Perception"], ["•Slower reflexes", "•Possibility of nausea and vomiting", "•Boisterousness", "•Slurred Speech"], ["•Vomiting", "•Emotional swings", "•Memory blackout", "•Impaired sensations"]]
     
     var defaults = UserDefaults()
+    var currentBAC = BAC.sharedInstance
     
     var age:Int = 0
     var gender:Int = 0 //0 for male, 1 for female
@@ -24,6 +25,12 @@ class SettingsVC: UIViewController {
 
         // Do any additional setup after loading the view.
 
+        if (defaults.object(forKey: "Ounces") != nil) {
+            currentBAC.A = defaults.double(forKey: "Ounces")
+        } else {
+            currentBAC.A = 0.0
+            defaults.set(0.0, forKey: "Ounces")
+        }
         if (defaults.object(forKey: "Limit") != nil) {
             limit = defaults.double(forKey: "Limit")
             limitSlider.value = Float(limit)
@@ -59,7 +66,6 @@ class SettingsVC: UIViewController {
     @IBAction func dismissKeyboard(_ sender: Any) {
         weightInput.endEditing(true)
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -112,8 +118,10 @@ class SettingsVC: UIViewController {
         defaults.removeObject(forKey: "Weight")
         defaults.removeObject(forKey: "Limit")
         defaults.removeObject(forKey: "StartTime")
+        defaults.removeObject(forKey: "Ounces")
         defaults.synchronize()
         viewDidLoad()
+        currentBAC.calcBAC()
         limitChanged(Any.self)
     }
     
