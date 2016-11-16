@@ -46,7 +46,7 @@ class BAC {
         }
         
         bac.defaults.synchronize()
-
+        
         return bac
     }()
     
@@ -63,19 +63,15 @@ class BAC {
         
         let cal = Calendar.current.dateComponents([.hour, .minute], from: startTime, to: Date())
         
-        let hourPassed = Double(cal.hour!) + Double(cal.minute!) / 60.0
+        let hourPassed = Double(cal.hour!) + (Double(cal.minute!) / 60.0)
         
         bloodAlcoholContent = (A * 5.14 / W * r[gender]) - 0.015 * hourPassed
         if(bloodAlcoholContent < 0.0) {
             bloodAlcoholContent = 0.0
+            A = 0.0
+            defaults.set(0.0, forKey: "Ounces")
+            defaults.synchronize()
         }
-        
-        print(A)
-        print(W)
-        print(r[gender])
-        print(0.015 * hourPassed)
-        print(bloodAlcoholContent)
-        print("-------------")
     }
     
     

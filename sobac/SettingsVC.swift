@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsVC: UIViewController {
     
+    var formatter = NumberFormatter()
+    
     let limitWarnings = [["•Average individual appears normal"], ["•Decreased inhibition", "•Mild euphoria", "•Loss of concentration"], ["•Blunted feelings", "•Reduced sensitivity to pain", "•Extroversion", "•Loss of Reasoning", "•Loss of Depth Perception"], ["•Slower reflexes", "•Possibility of nausea and vomiting", "•Boisterousness", "•Slurred Speech"], ["•Vomiting", "•Emotional swings", "•Memory blackout", "•Impaired sensations"]]
     
     var defaults = UserDefaults()
@@ -19,12 +21,19 @@ class SettingsVC: UIViewController {
     var gender:Int = 0 //0 for male, 1 for female
     var limit:Double = 0.08
     var weight:Double = 140.0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        formatter.numberStyle = .decimal
+        formatter.minimumSignificantDigits = 2
+        formatter.maximumSignificantDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        formatter.usesSignificantDigits = true
+        
         // Do any additional setup after loading the view.
-
+        
         if (defaults.object(forKey: "Ounces") != nil) {
             currentBAC.A = defaults.double(forKey: "Ounces")
         } else {
@@ -66,7 +75,7 @@ class SettingsVC: UIViewController {
     @IBAction func dismissKeyboard(_ sender: Any) {
         weightInput.endEditing(true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -106,7 +115,7 @@ class SettingsVC: UIViewController {
             output += line + "\n"
         }
         
-        limitLabel.text = String(limitSlider.value)
+        limitLabel.text = formatter.string(for: limitSlider.value)! + "%"
         
         limitText.text = output
         
@@ -132,13 +141,13 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var genderSelector: UISegmentedControl!
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
