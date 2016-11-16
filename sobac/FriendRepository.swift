@@ -1,0 +1,43 @@
+//
+//  FriendRepository.swift
+//  sobac
+//
+//  Created by Andrew Henry on 11/15/16.
+//  Copyright © 2016 Daniel Porter. All rights reserved.
+//
+
+import Foundation
+
+class FriendRepository {
+    var friendsArray = [Friend]()
+    
+    static let sharedInstance: FriendRepository = {
+        let repo = FriendRepository()
+        var dirpath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        dirpath = "file://" + dirpath
+        let dirurl = URL(string: dirpath)
+        let fileurl = dirurl?.appendingPathComponent("friends.json")
+        
+        do {
+            let data = try Data(contentsOf: fileurl!)
+           repo.friendsArray = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [Friend]
+        } catch{
+            print("error")
+        }
+        return repo
+    }()
+    
+    func save(){
+        //send array back to the file
+        var dirpath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        dirpath = "file://" + dirpath
+        let dirurl = URL(string: dirpath)
+        let fileurl = dirurl?.appendingPathComponent("friends.json")
+        do{
+            let json = try JSONSerialization.data(withJSONObject: friendsArray, options: .prettyPrinted)
+            try json.write(to: fileurl!)
+        }catch{
+            print("error")
+        }
+    }
+}

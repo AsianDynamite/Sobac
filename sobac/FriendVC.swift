@@ -1,16 +1,19 @@
 //
-//  DrinkDetailsViewController.swift
+//  FriendVC.swift
 //  sobac
 //
-//  Created by Nate Henry on 11/15/16.
+//  Created by Andrew Henry on 11/15/16.
 //  Copyright © 2016 Daniel Porter. All rights reserved.
 //
 
 import UIKit
 
-class DrinkDetailsViewController: UIViewController {
+class FriendVC: UIViewController {
 
-    @IBOutlet weak var drinkWebView: UIWebView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var BAClimitLabel: UILabel!
+    @IBOutlet weak var percentageLabel: UILabel!
+    @IBOutlet weak var CircleProgression: CircleProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

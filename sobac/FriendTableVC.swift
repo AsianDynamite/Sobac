@@ -10,6 +10,9 @@ import UIKit
 
 class FriendTableVC: UITableViewController {
 
+    var friendsRepo = FriendRepository.sharedInstance
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,20 +32,24 @@ class FriendTableVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friendsRepo.friendsArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as! FriendCell
 
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return indexPath
     }
 
     /*
