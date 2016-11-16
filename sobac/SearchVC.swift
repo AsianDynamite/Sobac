@@ -12,7 +12,15 @@ class SearchVC: UIViewController {
 
     @IBOutlet weak var nameSwitch: UISwitch!
     @IBOutlet weak var ingredientSwitch: UISwitch!
+    @IBOutlet weak var searchTextLabel: UITextField!
     
+    @IBAction func nameSwitchTap(_ sender: AnyObject) {
+        ingredientSwitch.setOn(false, animated: true)
+    }
+    
+    @IBAction func ingredientSwitchTap(_ sender: AnyObject) {
+        nameSwitch.setOn(false, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +34,25 @@ class SearchVC: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let child = (segue.destination as! CocktailTableVC)
+        child.seachString = searchTextLabel.text
+        
+        if(nameSwitch.isOn){
+            child.nameSearch = true
+            child.ingredientSearch = false
+        } else {
+            child.nameSearch = false
+            child.ingredientSearch = true
+        }
     }
-    */
+ 
 
 }

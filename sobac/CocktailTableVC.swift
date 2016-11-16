@@ -9,6 +9,10 @@
 import UIKit
 
 class CocktailTableVC: UITableViewController {
+    
+    var nameSearch : Bool!
+    var ingredientSearch : Bool!
+    var seachString : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
