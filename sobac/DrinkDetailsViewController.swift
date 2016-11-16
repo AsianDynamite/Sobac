@@ -14,6 +14,12 @@ class DrinkDetailsViewController: UIViewController {
 
     @IBOutlet weak var drinkWebView: UIWebView!
     
+    @IBAction func backButtonClick(_ sender: AnyObject) {
+    }
+    
+    @IBAction func addDrinkClick(_ sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -50,8 +50,15 @@ class frontVC: UIViewController {
             let child = (segue.source as! SettingsVC)
             
             limitText.text = "Limit: " + String(child.limit) + "%"
+            child.dismiss(animated: true, completion: nil)
             viewDidLoad()
         } else if(segue.identifier == "returnFromAdding") {
+            let child = (segue.source as! FriendTableVC)
+            child.dismiss(animated: true, completion: nil)
+            viewDidLoad()
+        } else if (segue.identifier == "returnFromSearch"){
+            let child = (segue.source as! SearchVC)
+            child.dismiss(animated: true, completion: nil)
             viewDidLoad()
         }
     }
