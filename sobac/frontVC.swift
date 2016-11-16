@@ -13,33 +13,58 @@ class frontVC: UIViewController {
     var currentBAC = BAC.sharedInstance
     var defaults = UserDefaults()
     var limit: Double!
-
+    
+    var formatter = NumberFormatter()
+    var percentFormatter = NumberFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         gearButton.layer.cornerRadius = 5
         
+        formatter.numberStyle = .decimal
+        formatter.minimumSignificantDigits = 2
+        formatter.maximumSignificantDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        formatter.usesSignificantDigits = true
+        
+        percentFormatter.numberStyle = .percent
+        
         if (defaults.object(forKey: "Limit") != nil) {
             limit = defaults.double(forKey: "Limit")
-            limitText.text = "Limit: " + String(limit) + "%"
+            limitText.text = "Limit: " + formatter.string(for: limit)! + "%"
         } else {
             limit = 0.08
-            limitText.text = "Limit: " + String(limit) + "%"
+            limitText.text = "Limit: " + formatter.string(for: limit)! + "%"
         }
         
         currentBAC.calcBAC()
-
+        
         
         if(limit > 0.0) {
-            progressCircle.progress = currentBAC.bloodAlcoholContent / limit
-            bacPercentLabel.text = String(currentBAC.bloodAlcoholContent / limit)
+            let progress = currentBAC.bloodAlcoholContent / limit
+            if(progress < 0.5) {
+                progressCircle.progress = progress
+                progressCircle.trackFillColor = UIColor.green
+            } else if(progress < 0.8) {
+                progressCircle.progress = progress
+                progressCircle.trackFillColor = UIColor.yellow
+            } else if(progress < 1.0) {
+                progressCircle.progress = progress
+                progressCircle.trackFillColor = UIColor.red
+            } else {
+                progressCircle.progress = 1.0
+            }
+            print(progress)
+            bacPercentLabel.text = formatter.string(for: currentBAC.bloodAlcoholContent)! + "%"
         } else {
             progressCircle.progress = 0.0
-            bacPercentLabel.text = String(currentBAC.bloodAlcoholContent / limit)
+            bacPercentLabel.text = formatter.string(for: currentBAC.bloodAlcoholContent)! + "%"
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,16 +74,9 @@ class frontVC: UIViewController {
         if(segue.identifier == "returnFromSettings") {
             let child = (segue.source as! SettingsVC)
             
-            limitText.text = "Limit: " + String(child.limit) + "%"
-            child.dismiss(animated: true, completion: nil)
+            limitText.text = "Limit: " + formatter.string(for: child.limit)! + "%"
             viewDidLoad()
         } else if(segue.identifier == "returnFromAdding") {
-            let child = (segue.source as! FriendTableVC)
-            child.dismiss(animated: true, completion: nil)
-            viewDidLoad()
-        } else if (segue.identifier == "returnFromSearch"){
-            let child = (segue.source as! SearchVC)
-            child.dismiss(animated: true, completion: nil)
             viewDidLoad()
         }
     }
@@ -70,13 +88,13 @@ class frontVC: UIViewController {
     @IBOutlet var leftSwipe: UISwipeGestureRecognizer!
     @IBOutlet weak var progressCircle: CircleProgressView!
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
