@@ -28,6 +28,7 @@
 		3DADE1021DD96C3B0035AFD8 /* rightSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */; };
 		3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B31DD9670D00F78340 /* upSegue.swift */; };
 		3DCA43B61DD9671600F78340 /* downSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B51DD9671600F78340 /* downSegue.swift */; };
+		3DDEF7191DDBCC1A00C19A06 /* BAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEF7181DDBCC1A00C19A06 /* BAC.swift */; };
 		E84916361DDB82090092A025 /* DrinkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		3DADE1001DD96C3B0035AFD8 /* rightSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rightSegue.swift; sourceTree = "<group>"; };
 		3DCA43B31DD9670D00F78340 /* upSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upSegue.swift; sourceTree = "<group>"; };
 		3DCA43B51DD9671600F78340 /* downSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = downSegue.swift; sourceTree = "<group>"; };
+		3DDEF7181DDBCC1A00C19A06 /* BAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAC.swift; sourceTree = "<group>"; };
 		E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 			children = (
 				3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */,
 				3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */,
+				3DDEF7181DDBCC1A00C19A06 /* BAC.swift */,
 			);
 			name = BACCalcView;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				3D4DC3A11DD9266200FD6DC3 /* CocktailTableVC.swift in Sources */,
 				3DADE1021DD96C3B0035AFD8 /* rightSegue.swift in Sources */,
 				3D4DC3AC1DD9275700FD6DC3 /* ManualAddVC.swift in Sources */,
+				3DDEF7191DDBCC1A00C19A06 /* BAC.swift in Sources */,
 				3D4DC39B1DD90AB100FD6DC3 /* newBACButton.swift in Sources */,
 				3D4DC3931DD6B03300FD6DC3 /* CircleProgressView.swift in Sources */,
 				3D4DC3A71DD926DA00FD6DC3 /* CocktailCell.swift in Sources */,

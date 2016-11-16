@@ -12,15 +12,9 @@ class ManualAddVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     let pickOptions = ["0", "1", "2", "3", "4", "5", "6", "7"]
     
-    //Widmark's Formula
-    //% BAC = (A x 5.14 / W x r) – .015 x H
-    var A = 0.0 //Liquid ounces of alcohol consumed
-    var W = 0.0 //Person's weight in pounds
-    var r = [0.73, 0.66] //A gender constant of alcohol distribution (.73 for men and .66 for women)
-    var H = 0.0 // Hours elapsed since drinking commenced
+    let tempBac = BAC.sharedInstance
+    var defaults = UserDefaults()
     
-    var BAC = 0.0
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +30,34 @@ class ManualAddVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         addButton.layer.cornerRadius = 5
         cancelButton.layer.cornerRadius = 5
         
-        BAC = (A * 5.14 / W * r[1]) - 0.015 * H
+        defaults.synchronize()
+    }
+    
+    @IBAction func donePress(_ sender: AnyObject) {
+        //These numbers will be replaced by user-defined numbers later
+        tempBac.A += 12 * 0.05 * Double(beerPicker.selectedRow(inComponent: 0))
+        tempBac.A += 5 * 0.12 * Double(beerPicker.selectedRow(inComponent: 0))
+        tempBac.A += 1.5 * 0.40 * Double(beerPicker.selectedRow(inComponent: 0))
+        
+        if (defaults.object(forKey: "Gender") != nil) {
+            tempBac.gender = defaults.integer(forKey: "Gender")
+        } else {
+            tempBac.gender = 0
+            defaults.set(0, forKey: "Gender")
+        }
+
+        if (defaults.object(forKey: "Weight") != nil) {
+            tempBac.W = defaults.double(forKey: "Weight")
+        } else {
+            tempBac.W = 140.0
+            defaults.set(140.0, forKey: "Weight")
+        }
+        
+        tempBac.calcBAC()
+    }
+    
+    @IBAction func cancelPress(_ sender: AnyObject) {
+        //Maybe increment the time here
     }
 
     override func didReceiveMemoryWarning() {
