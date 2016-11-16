@@ -10,10 +10,10 @@ import UIKit
 
 class FriendVC: UIViewController {
 
-    @IBOutlet weak var friendLabel: UILabel!
-    @IBOutlet weak var limitLabel: UILabel!
-    @IBOutlet weak var BACPercentage: UILabel!
-    @IBOutlet weak var BACProgression: CircleProgressView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var BAClimitLabel: UILabel!
+    @IBOutlet weak var percentageLabel: UILabel!
+    @IBOutlet weak var CircleProgression: CircleProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

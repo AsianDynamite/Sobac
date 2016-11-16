@@ -27,12 +27,6 @@ class FriendRepository {
         } catch{
             print("error")
         }
-        
-        //if fm.fileExists(atPath: (fileurl?.absoluteString)!){
-        //   print("is a file")
-        //} else {
-        //   print("no file")
-        //}
         return repo
     }()
     
