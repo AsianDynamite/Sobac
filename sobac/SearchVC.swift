@@ -15,11 +15,19 @@ class SearchVC: UIViewController {
     @IBOutlet weak var searchTextLabel: UITextField!
     
     @IBAction func nameSwitchTap(_ sender: AnyObject) {
-        ingredientSwitch.setOn(false, animated: true)
+        if(ingredientSwitch.isOn){
+            ingredientSwitch.setOn(false, animated: true)
+        } else {
+            ingredientSwitch.setOn(true, animated: true)
+        }
     }
     
     @IBAction func ingredientSwitchTap(_ sender: AnyObject) {
-        nameSwitch.setOn(false, animated: true)
+        if(nameSwitch.isOn){
+            nameSwitch.setOn(false, animated: true)
+        } else {
+            nameSwitch.setOn(true, animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -42,15 +50,20 @@ class SearchVC: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let child = (segue.destination as! CocktailTableVC)
-        child.seachString = searchTextLabel.text
+        if(segue.identifier == "searchResults"){
         
-        if(nameSwitch.isOn){
-            child.nameSearch = true
-            child.ingredientSearch = false
-        } else {
-            child.nameSearch = false
-            child.ingredientSearch = true
+            let child = (segue.destination as! CocktailTableVC)
+        
+        
+            child.seachString = searchTextLabel.text
+        
+            if(nameSwitch.isOn){
+                child.nameSearch = true
+                child.ingredientSearch = false
+            } else {
+                child.nameSearch = false
+                child.ingredientSearch = true
+            }
         }
     }
  
