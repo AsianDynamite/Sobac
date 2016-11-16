@@ -9,12 +9,37 @@
 import UIKit
 
 class frontVC: UIViewController {
+    
+    var currentBAC = BAC.sharedInstance
+    var defaults = UserDefaults()
+    var limit: Double!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         gearButton.layer.cornerRadius = 5
+        
+        if (defaults.object(forKey: "Limit") != nil) {
+            limit = defaults.double(forKey: "Limit")
+            limitText.text = "Limit: " + String(limit) + "%"
+
+        } else {
+            limit = 0.08
+            limitText.text = "Limit: " + String(limit) + "%"
+        }
+        
+        currentBAC.calcBAC()
+        
+        
+        
+        if(limit > 0.0) {
+            progressCircle.progress = currentBAC.bloodAlcoholContent / limit
+            bacPercentLabel.text = String(currentBAC.bloodAlcoholContent / limit)
+        } else {
+            progressCircle.progress = 0.0
+            bacPercentLabel.text = String(currentBAC.bloodAlcoholContent / limit)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +47,18 @@ class frontVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func done(_ segue: UIStoryboardSegue) {
+        if(segue.identifier == "returnFromSettings") {
+            let child = (segue.source as! SettingsVC)
+            
+            limitText.text = "Limit: " + String(child.limit) + "%"
+        } else if(segue.identifier == "returnFromAdding") {
+            viewDidLoad()
+        }
+    }
+    
+    @IBOutlet weak var bacPercentLabel: UILabel!
+    @IBOutlet weak var limitText: UILabel!
     @IBOutlet weak var gearButton: UIButton!
     @IBOutlet var rightSwipe: UISwipeGestureRecognizer!
     @IBOutlet var leftSwipe: UISwipeGestureRecognizer!
