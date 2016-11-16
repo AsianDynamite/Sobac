@@ -17,13 +17,10 @@ class FriendRepository {
         dirpath = "file://" + dirpath
         let dirurl = URL(string: dirpath)
         let fileurl = dirurl?.appendingPathComponent("friends.json")
-        //let fm = FileManager.default
-        print(dirpath)
         
         do {
             let data = try Data(contentsOf: fileurl!)
            repo.friendsArray = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [Friend]
-           // print(repo.words.count)
         } catch{
             print("error")
         }
