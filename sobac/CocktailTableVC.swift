@@ -185,8 +185,10 @@ class CocktailTableVC: UITableViewController, URLSessionDelegate, URLSessionDown
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let child = (segue.destination as! DrinkDetailsViewController)
-        child.drinkID = drinkArrayObjs[row].idDrink
+        //if(segue.identifier == "drinkPageSegue"){
+            let child = (segue.destination as! DrinkDetailsViewController)
+            child.drinkID = drinkArrayObjs[row].idDrink
+        //}
     }
  
 
