@@ -532,6 +532,9 @@
                             <constraint firstItem="lAs-gg-JWi" firstAttribute="trailing" secondItem="Du2-pd-dva" secondAttribute="trailing" id="wxS-Pb-KHx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drinkWebView" destination="Du2-pd-dva" id="uLi-Bb-i24"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyN-Ma-gDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="uWG-6Y-clE">
@@ -708,7 +711,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="DGB-dd-2Zc"/>
         <segue reference="ETa-Dv-W3q"/>
-        <segue reference="YKi-gw-e0B"/>
+        <segue reference="Mgh-VV-FBK"/>
         <segue reference="g78-QV-5TB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,6 +29,9 @@
 		3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B31DD9670D00F78340 /* upSegue.swift */; };
 		3DCA43B61DD9671600F78340 /* downSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA43B51DD9671600F78340 /* downSegue.swift */; };
 		E84916361DDB82090092A025 /* DrinkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */; };
+		E84916381DDC020F0092A025 /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916371DDC020F0092A025 /* FriendRepository.swift */; };
+		E849163A1DDC02180092A025 /* FriendClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916391DDC02180092A025 /* FriendClass.swift */; };
+		E849163C1DDC02270092A025 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849163B1DDC02270092A025 /* FriendVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		3DCA43B31DD9670D00F78340 /* upSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upSegue.swift; sourceTree = "<group>"; };
 		3DCA43B51DD9671600F78340 /* downSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = downSegue.swift; sourceTree = "<group>"; };
 		E84916351DDB82090092A025 /* DrinkDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkDetailsViewController.swift; sourceTree = "<group>"; };
+		E84916371DDC020F0092A025 /* FriendRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		E84916391DDC02180092A025 /* FriendClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendClass.swift; sourceTree = "<group>"; };
+		E849163B1DDC02270092A025 /* FriendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 		3D4DC3631DD6AFB200FD6DC3 /* sobac */ = {
 			isa = PBXGroup;
 			children = (
+				E849163F1DDC02850092A025 /* FriendView */,
+				E849163D1DDC02330092A025 /* Repositories */,
 				3DCA43B21DD9586700F78340 /* FrontPage */,
 				3DCA43B11DD9584D00F78340 /* CustomElements */,
 				3D4DC3AA1DD9272700FD6DC3 /* BACCalcView */,
@@ -162,6 +170,7 @@
 		3D4DC39C1DD9250400FD6DC3 /* friendTable */ = {
 			isa = PBXGroup;
 			children = (
+				E84916391DDC02180092A025 /* FriendClass.swift */,
 				3D4DC3A21DD926B500FD6DC3 /* FriendTableVC.swift */,
 				3D4DC3A41DD926CD00FD6DC3 /* FriendCell.swift */,
 			);
@@ -208,6 +217,22 @@
 				3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */,
 			);
 			name = FrontPage;
+			sourceTree = "<group>";
+		};
+		E849163D1DDC02330092A025 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E84916371DDC020F0092A025 /* FriendRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		E849163F1DDC02850092A025 /* FriendView */ = {
+			isa = PBXGroup;
+			children = (
+				E849163B1DDC02270092A025 /* FriendVC.swift */,
+			);
+			name = FriendView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +375,8 @@
 				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
 				3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */,
 				3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */,
+				E849163C1DDC02270092A025 /* FriendVC.swift in Sources */,
+				E849163A1DDC02180092A025 /* FriendClass.swift in Sources */,
 				3D2026DA1DDBA4B2003987B4 /* SettingsVC.swift in Sources */,
 				3D4DC3AE1DD9279900FD6DC3 /* BACtrackVC.swift in Sources */,
 				3D4DC3951DD6BEBA00FD6DC3 /* frontVC.swift in Sources */,
@@ -359,6 +386,7 @@
 				3DADE1021DD96C3B0035AFD8 /* rightSegue.swift in Sources */,
 				3D4DC3AC1DD9275700FD6DC3 /* ManualAddVC.swift in Sources */,
 				3D4DC39B1DD90AB100FD6DC3 /* newBACButton.swift in Sources */,
+				E84916381DDC020F0092A025 /* FriendRepository.swift in Sources */,
 				3D4DC3931DD6B03300FD6DC3 /* CircleProgressView.swift in Sources */,
 				3D4DC3A71DD926DA00FD6DC3 /* CocktailCell.swift in Sources */,
 			);

@@ -10,6 +10,8 @@ import UIKit
 
 class DrinkDetailsViewController: UIViewController {
 
+    @IBOutlet weak var drinkWebView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
