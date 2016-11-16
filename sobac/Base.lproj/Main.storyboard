@@ -631,7 +631,7 @@
                                     <color key="titleColor" red="0.79594565949999996" green="0.79594565949999996" blue="0.79594565949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lG9-WE-NHS" kind="show" customClass="leftSegue" customModule="sobac" customModuleProvider="target" id="YKi-gw-e0B"/>
+                                    <segue destination="lG9-WE-NHS" kind="show" identifier="searchResults" customClass="leftSegue" customModule="sobac" customModuleProvider="target" id="YKi-gw-e0B"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-ou-jKn">
@@ -711,7 +711,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="DGB-dd-2Zc"/>
         <segue reference="ETa-Dv-W3q"/>
-        <segue reference="Mgh-VV-FBK"/>
+        <segue reference="YKi-gw-e0B"/>
         <segue reference="g78-QV-5TB"/>
     </inferredMetricsTieBreakers>
 </document>
