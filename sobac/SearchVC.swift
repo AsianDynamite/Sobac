@@ -31,9 +31,7 @@ class SearchVC: UIViewController {
     }
     
     @IBAction func fromTable(_ segue: UIStoryboardSegue) {
-        let child = (segue.source as! CocktailTableVC)
-        child.dismiss(animated: true, completion: nil)
-        viewDidLoad()
+        
     }
     
     override func viewDidLoad() {

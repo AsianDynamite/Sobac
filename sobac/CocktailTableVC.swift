@@ -19,6 +19,10 @@ class CocktailTableVC: UITableViewController, URLSessionDelegate, URLSessionDown
     var row : Int = 0
     var jsonPath : String!
     
+    @IBAction func backToSearch(_ segue: UIStoryboardSegue!) {
+        
+    }
+    
     func urlSession(_ session : URLSession, downloadTask : URLSessionDownloadTask, didFinishDownloadingTo location : URL){
         do{
             let data = try Data(contentsOf: location)
