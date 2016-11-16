@@ -26,6 +26,12 @@ class BAC {
     static let sharedInstance: BAC = {
         let bac = BAC()
         
+        if (bac.defaults.object(forKey: "Ounces") != nil) {
+            bac.A = bac.defaults.double(forKey: "Ounces")
+        } else {
+            bac.A = 0.0
+            bac.defaults.set(0.0, forKey: "Ounces")
+        }
         if (bac.defaults.object(forKey: "Gender") != nil) {
             bac.gender = bac.defaults.integer(forKey: "Gender")
         } else {
@@ -60,6 +66,16 @@ class BAC {
         let hourPassed = Double(cal.hour!) + Double(cal.minute!) / 60.0
         
         bloodAlcoholContent = (A * 5.14 / W * r[gender]) - 0.015 * hourPassed
+        if(bloodAlcoholContent < 0.0) {
+            bloodAlcoholContent = 0.0
+        }
+        
+        print(A)
+        print(W)
+        print(r[gender])
+        print(0.015 * hourPassed)
+        print(bloodAlcoholContent)
+        print("-------------")
     }
     
     

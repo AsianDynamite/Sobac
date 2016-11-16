@@ -23,15 +23,13 @@ class frontVC: UIViewController {
         if (defaults.object(forKey: "Limit") != nil) {
             limit = defaults.double(forKey: "Limit")
             limitText.text = "Limit: " + String(limit) + "%"
-
         } else {
             limit = 0.08
             limitText.text = "Limit: " + String(limit) + "%"
         }
         
         currentBAC.calcBAC()
-        
-        
+
         
         if(limit > 0.0) {
             progressCircle.progress = currentBAC.bloodAlcoholContent / limit
@@ -52,6 +50,7 @@ class frontVC: UIViewController {
             let child = (segue.source as! SettingsVC)
             
             limitText.text = "Limit: " + String(child.limit) + "%"
+            viewDidLoad()
         } else if(segue.identifier == "returnFromAdding") {
             viewDidLoad()
         }

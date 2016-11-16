@@ -35,23 +35,22 @@ class ManualAddVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     @IBAction func donePress(_ sender: AnyObject) {
         //These numbers will be replaced by user-defined numbers later
-        tempBac.A += 12 * 0.05 * Double(beerPicker.selectedRow(inComponent: 0))
-        tempBac.A += 5 * 0.12 * Double(beerPicker.selectedRow(inComponent: 0))
-        tempBac.A += 1.5 * 0.40 * Double(beerPicker.selectedRow(inComponent: 0))
         
-        if (defaults.object(forKey: "Gender") != nil) {
-            tempBac.gender = defaults.integer(forKey: "Gender")
+        
+        if (defaults.object(forKey: "Ounces") != nil) {
+            tempBac.A = defaults.double(forKey: "Ounces")
         } else {
-            tempBac.gender = 0
-            defaults.set(0, forKey: "Gender")
+            tempBac.A = 0.0
+            defaults.set(0.0, forKey: "Ounces")
         }
-
-        if (defaults.object(forKey: "Weight") != nil) {
-            tempBac.W = defaults.double(forKey: "Weight")
-        } else {
-            tempBac.W = 140.0
-            defaults.set(140.0, forKey: "Weight")
-        }
+        
+        tempBac.A += 12 * 0.05 * Double(beerPicker.selectedRow(inComponent: 0))
+        tempBac.A += 5 * 0.12 * Double(winePicker.selectedRow(inComponent: 0))
+        tempBac.A += 1.5 * 0.40 * Double(shotPicker.selectedRow(inComponent: 0))
+        
+        defaults.set(tempBac.A, forKey: "Ounces")
+        
+        defaults.synchronize()
         
         tempBac.calcBAC()
     }

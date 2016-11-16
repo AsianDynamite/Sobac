@@ -27,7 +27,7 @@
                                 <rect key="frame" x="19" y="164.5" width="338" height="338"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-jE-apD">
-                                        <rect key="frame" x="120" y="149.5" width="98.5" height="39.5"/>
+                                        <rect key="frame" x="120" y="150" width="99" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -35,9 +35,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0046391095966100693" green="0.054786764085292816" blue="0.2774793803691864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="PMe-jE-apD" firstAttribute="centerX" secondItem="kSy-Sj-mQA" secondAttribute="centerX" id="VsL-2l-1B5"/>
-                                    <constraint firstAttribute="width" secondItem="kSy-Sj-mQA" secondAttribute="height" multiplier="1:1" id="vns-qX-N2J"/>
-                                    <constraint firstItem="PMe-jE-apD" firstAttribute="centerY" secondItem="kSy-Sj-mQA" secondAttribute="centerY" id="xcO-LI-vL4"/>
+                                    <constraint firstItem="PMe-jE-apD" firstAttribute="centerX" secondItem="kSy-Sj-mQA" secondAttribute="centerX" id="3Z4-Eg-n2g"/>
+                                    <constraint firstItem="PMe-jE-apD" firstAttribute="centerY" secondItem="kSy-Sj-mQA" secondAttribute="centerY" constant="1" id="E6u-Ic-qC4"/>
+                                    <constraint firstAttribute="width" secondItem="kSy-Sj-mQA" secondAttribute="height" multiplier="1:1" id="tVO-jG-qNs"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="629" width="375" height="38"/>
                                 <color key="backgroundColor" red="0.12549019607843137" green="0.27843137254901962" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="M3Q-ZK-SBP"/>
+                                    <constraint firstAttribute="height" constant="38" id="FlM-Ox-JvM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Drink Button">
@@ -89,21 +89,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHy-es-HBy">
                                 <rect key="frame" x="319" y="28" width="36" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.51903257979999995" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="UUX-wQ-aAT"/>
-                                    <constraint firstAttribute="height" constant="36" id="nJx-ms-BI5"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="⚙"/>
                                 <connections>
-                                    <segue destination="apZ-i3-5Bs" kind="show" id="KrN-oU-Epa"/>
+                                    <segue destination="apZ-i3-5Bs" kind="show" customClass="rightSegue" customModule="sobac" customModuleProvider="target" id="KrN-oU-Epa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limit: 0.80%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bG-jz-eyf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limit: 0.80%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8bG-jz-eyf">
                                 <rect key="frame" x="90" y="555" width="195" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8bG-jz-eyf" secondAttribute="height" multiplier="65:12" id="0sF-g5-K6g"/>
+                                    <constraint firstAttribute="height" constant="36" id="5If-TB-fHf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,20 +109,22 @@
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.054901960784313725" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gHy-es-HBy" secondAttribute="trailing" constant="4" id="6AE-Hv-Qn4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3B-ls-UGr" secondAttribute="bottom" id="CM0-aS-HhJ"/>
-                            <constraint firstItem="kSy-Sj-mQA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="IGZ-aD-Ixo"/>
-                            <constraint firstItem="kSy-Sj-mQA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JMO-d7-VKu"/>
-                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="T4e-ax-b23"/>
-                            <constraint firstItem="gHy-es-HBy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TRJ-AB-bnw"/>
-                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UcM-3E-MNc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kSy-Sj-mQA" secondAttribute="trailing" constant="2" id="Vqr-4W-Yqk"/>
-                            <constraint firstAttribute="trailing" secondItem="q3B-ls-UGr" secondAttribute="trailing" id="YNe-hv-Ji0"/>
-                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="gv8-6t-Pkz"/>
-                            <constraint firstItem="q3B-ls-UGr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kcu-aO-43M"/>
-                            <constraint firstItem="8bG-jz-eyf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p8X-fC-3lj"/>
-                            <constraint firstItem="kSy-Sj-mQA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uXD-ds-6cT"/>
-                            <constraint firstItem="8bG-jz-eyf" firstAttribute="top" secondItem="kSy-Sj-mQA" secondAttribute="bottom" constant="52.5" id="xW6-mj-A8p"/>
+                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="bottom" secondItem="gHy-es-HBy" secondAttribute="bottom" id="3gC-c9-Vda"/>
+                            <constraint firstItem="8bG-jz-eyf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="6Pe-tv-gKo"/>
+                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8IY-Jb-pZr"/>
+                            <constraint firstItem="kSy-Sj-mQA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="92h-ZE-qEn"/>
+                            <constraint firstAttribute="trailing" secondItem="q3B-ls-UGr" secondAttribute="trailing" id="DTj-nU-9Rx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8bG-jz-eyf" secondAttribute="trailing" constant="74" id="DjR-Ri-qKO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3B-ls-UGr" secondAttribute="bottom" id="O6g-Kb-qWC"/>
+                            <constraint firstItem="gHy-es-HBy" firstAttribute="leading" secondItem="Jjk-F2-lUK" secondAttribute="trailing" constant="8" id="P0d-bv-TO6"/>
+                            <constraint firstItem="q3B-ls-UGr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qiv-rr-HAS"/>
+                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XZg-o3-acp"/>
+                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="Yyr-pF-aYx"/>
+                            <constraint firstItem="q3B-ls-UGr" firstAttribute="top" secondItem="8bG-jz-eyf" secondAttribute="bottom" constant="38" id="ZVc-9v-UtZ"/>
+                            <constraint firstItem="Jjk-F2-lUK" firstAttribute="top" secondItem="gHy-es-HBy" secondAttribute="top" id="dsf-CS-hN6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kSy-Sj-mQA" secondAttribute="trailing" constant="2" id="kJW-ax-qAp"/>
+                            <constraint firstItem="kSy-Sj-mQA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r8Z-0g-Sdj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gHy-es-HBy" secondAttribute="trailing" constant="4" id="wEL-1W-yme"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="HyB-wS-hu1" appends="YES" id="W72-En-GsU"/>
@@ -200,7 +198,7 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelPress:" destination="bac-DY-BaF" eventType="touchUpInside" id="B1J-i1-XcL"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" customClass="upSegue" customModule="sobac" customModuleProvider="target" id="4bt-Of-hkD"/>
+                                    <segue destination="Eqb-hn-DKf" kind="unwind" identifier="cancelAdding" unwindAction="done:" id="3XZ-Qf-1Ho"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj0-w1-1sY">
@@ -215,7 +213,7 @@
                                 </state>
                                 <connections>
                                     <action selector="donePress:" destination="bac-DY-BaF" eventType="touchUpInside" id="dXM-w9-4xx"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="returnFromAdding" customClass="upSegue" customModule="sobac" customModuleProvider="target" id="kb9-Bj-3gW"/>
+                                    <segue destination="Eqb-hn-DKf" kind="unwind" identifier="returnFromAdding" unwindAction="done:" id="qEZ-YN-TK5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍷" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-hG-NdA">
@@ -279,6 +277,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIN-Rg-r4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Eqb-hn-DKf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="145" y="855"/>
         </scene>
@@ -312,7 +311,7 @@
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limit" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhA-8G-fdV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limit" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhA-8G-fdV">
                                 <rect key="frame" x="59" y="240" width="257" height="307"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -418,6 +417,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsq-JD-vnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YM2-qS-Vv4" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="MXG-3W-1TO">
                     <connections>
                         <action selector="dismissKeyboard:" destination="apZ-i3-5Bs" id="I5K-hA-8vO"/>
@@ -425,7 +425,7 @@
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="Khs-wK-Fmc">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="returnFromSettings" customClass="rightSegue" customModule="sobac" customModuleProvider="target" id="4SQ-gN-Z8G"/>
+                        <segue destination="YM2-qS-Vv4" kind="unwind" identifier="returnFromSettings" unwindAction="done:" id="na6-ft-ahI"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -471,7 +471,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pE-x0-sMo" id="nHt-7q-xfa">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-dw-MGy">
@@ -567,11 +567,7 @@
                     <navigationItem key="navigationItem" title="Friends" id="fCH-T0-K03"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLG-Wn-JaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="gWt-61-kcb">
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" customClass="rightSegue" customModule="sobac" customModuleProvider="target" id="tKv-xv-cf3"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="gWt-61-kcb"/>
             </objects>
             <point key="canvasLocation" x="904.79999999999995" y="-586.05697151424295"/>
         </scene>
@@ -674,11 +670,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uX-JP-Zzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="MC3-Zp-ZCt">
-                    <connections>
-                        <segue destination="D4n-Ek-RtJ" kind="show" customClass="rightSegue" customModule="sobac" customModuleProvider="target" id="k6X-Hp-q9f"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="MC3-Zp-ZCt"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="-586.05697151424295"/>
         </scene>
@@ -729,11 +721,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyN-Ma-gDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="uWG-6Y-clE">
-                    <connections>
-                        <segue destination="lG9-WE-NHS" kind="show" customClass="rightSegue" customModule="sobac" customModuleProvider="target" id="Mgh-VV-FBK"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="uWG-6Y-clE"/>
             </objects>
             <point key="canvasLocation" x="-194.40000000000001" y="-1531.4842578710645"/>
         </scene>
@@ -750,7 +738,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9s-8i-YkH" id="hvg-uu-lFG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YkW-fQ-SJh">
@@ -795,9 +783,10 @@
                     <navigationItem key="navigationItem" title="Cocktails" id="Zfs-L8-Ekd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpJ-TD-7VY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1aJ-iF-2FD" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="Kva-Ud-uAD">
                     <connections>
-                        <segue destination="4w3-Wj-3Qi" kind="show" identifier="" customClass="rightSegue" customModule="sobac" customModuleProvider="target" id="ETa-Dv-W3q"/>
+                        <segue destination="1aJ-iF-2FD" kind="unwind" unwindAction="fromTable:" id="xhG-4G-lzB"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -840,7 +829,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-ar-mHW">
-                                <rect key="frame" x="102" y="260" width="171" height="20.5"/>
+                                <rect key="frame" x="102.5" y="260" width="170" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vgI-ar-mHW" secondAttribute="height" multiplier="58:7" id="vd5-7B-fwJ"/>
                                 </constraints>
@@ -855,7 +844,7 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Ingredient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fh-5u-Z4U">
-                                <rect key="frame" x="69" y="338" width="237" height="20.5"/>
+                                <rect key="frame" x="70" y="338" width="235" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7fh-5u-Z4U" secondAttribute="height" multiplier="241:21" id="37Z-qs-xFZ"/>
                                 </constraints>
@@ -899,19 +888,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xub-d2-pnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Pgw-5y-Lh4" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="left" id="Dit-RG-Nd8">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" customClass="leftSegue" customModule="sobac" customModuleProvider="target" id="DGB-dd-2Zc"/>
+                        <segue destination="Pgw-5y-Lh4" kind="unwind" unwindAction="done:" id="s1V-Xv-7JH"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1199.2" y="-794.75262368815595"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="4SQ-gN-Z8G"/>
-        <segue reference="YKi-gw-e0B"/>
-        <segue reference="QJZ-oO-jlg"/>
-        <segue reference="g78-QV-5TB"/>
-    </inferredMetricsTieBreakers>
 </document>

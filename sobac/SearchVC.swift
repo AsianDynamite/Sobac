@@ -30,6 +30,10 @@ class SearchVC: UIViewController {
         }
     }
     
+    @IBAction func fromTable(_ segue: UIStoryboardSegue) {
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
