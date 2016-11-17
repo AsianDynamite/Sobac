@@ -103,6 +103,18 @@ class CocktailTableVC: UITableViewController, URLSessionDelegate, URLSessionDown
             jsonPath = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + searchString!
         }
         
+        var newJSONPath = ""
+        for c in jsonPath.characters {
+            
+            if(c == " "){
+                newJSONPath += "%20"
+            } else {
+                newJSONPath += String(c)
+            }
+        }
+        
+        jsonPath = newJSONPath
+        
         let url = URL(string: jsonPath)
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)

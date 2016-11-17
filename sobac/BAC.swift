@@ -59,6 +59,14 @@ class BAC {
             defaults.set(startTime, forKey: "StartTime")
         }
         
+        if (defaults.object(forKey: "Ounces") != nil) {
+            A = defaults.double(forKey: "Ounces")
+        } else {
+            A = 0.0
+            defaults.set(0.0, forKey: "Ounces")
+        }
+        
+        
         defaults.synchronize()
         
         let cal = Calendar.current.dateComponents([.hour, .minute], from: startTime, to: Date())
@@ -66,10 +74,11 @@ class BAC {
         let hourPassed = Double(cal.hour!) + (Double(cal.minute!) / 60.0)
         
         bloodAlcoholContent = (A * 5.14 / W * r[gender]) - 0.015 * hourPassed
-        if(bloodAlcoholContent < 0.0) {
+        if(bloodAlcoholContent <= 0.0) {
             bloodAlcoholContent = 0.0
             A = 0.0
             defaults.set(0.0, forKey: "Ounces")
+            defaults.removeObject(forKey: "StartTime")
             defaults.synchronize()
         }
     }
