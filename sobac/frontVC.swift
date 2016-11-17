@@ -13,12 +13,15 @@ class frontVC: UIViewController {
     var currentBAC = BAC.sharedInstance
     var defaults = UserDefaults()
     var limit: Double!
+    let observer = bacObserver()
     
     var formatter = NumberFormatter()
     var percentFormatter = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentBAC.addObserver(observer, forKeyPath: "A", options: .new, context: nil)
         
         // Do any additional setup after loading the view.
         gearButton.layer.cornerRadius = 5

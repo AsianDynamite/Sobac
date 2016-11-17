@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1C1A9C1DDD48960095E2A9 /* bacKVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C1A9B1DDD48960095E2A9 /* bacKVO.swift */; };
 		3D2026DA1DDBA4B2003987B4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */; };
 		3D4DC3651DD6AFB200FD6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */; };
 		3D4DC36A1DD6AFB200FD6DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DC3681DD6AFB200FD6DC3 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1C1A9B1DDD48960095E2A9 /* bacKVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bacKVO.swift; sourceTree = "<group>"; };
 		3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		3D4DC3611DD6AFB200FD6DC3 /* sobac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sobac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				3D4DC3AB1DD9275700FD6DC3 /* ManualAddVC.swift */,
 				3D4DC3AD1DD9279900FD6DC3 /* BACtrackVC.swift */,
 				3DDEF7181DDBCC1A00C19A06 /* BAC.swift */,
+				3D1C1A9B1DDD48960095E2A9 /* bacKVO.swift */,
 			);
 			name = BACCalcView;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				E84916431DDC0F5E0092A025 /* TestOperation.swift in Sources */,
 				E84916411DDC087E0092A025 /* drinks.swift in Sources */,
 				3D4DC39F1DD9263000FD6DC3 /* SearchVC.swift in Sources */,
+				3D1C1A9C1DDD48960095E2A9 /* bacKVO.swift in Sources */,
 				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
 				3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */,
 				3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */,

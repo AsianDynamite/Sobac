@@ -8,14 +8,14 @@
 
 import Foundation
 
-class BAC {
+class BAC: NSObject {
     //Widmark's Formula
     //% BAC = (A x 5.14 / W x r) – .015 x H
-    var A: Double = 0.0 //Liquid ounces of alcohol consumed
-    var W: Double = 0.0 //Person's weight in pounds
+    dynamic var A: Double = 0.0 //Liquid ounces of alcohol consumed
+    dynamic var W: Double = 0.0 //Person's weight in pounds
     var r = [0.73, 0.66] //A gender constant of alcohol distribution (.73 for men and .66 for women)
-    var H: Double = 0.0 //Hours elapsed since drinking commenced
-    var gender: Int = 0 //0 for male, 1 for female
+    dynamic var H: Double = 0.0 //Hours elapsed since drinking commenced
+    dynamic var gender: Int = 0 //0 for male, 1 for female
     
     var defaults = UserDefaults()
     
@@ -23,8 +23,15 @@ class BAC {
     
     var dict = Dictionary<String, AnyObject>()
     
+    let observer = bacObserver()
+    
     static let sharedInstance: BAC = {
         let bac = BAC()
+        
+        bac.addObserver(bac.observer, forKeyPath: "A", options: .new, context: nil)
+        bac.addObserver(bac.observer, forKeyPath: "W", options: .new, context: nil)
+        bac.addObserver(bac.observer, forKeyPath: "H", options: .new, context: nil)
+        bac.addObserver(bac.observer, forKeyPath: "gender", options: .new, context: nil)
         
         if (bac.defaults.object(forKey: "Ounces") != nil) {
             bac.A = bac.defaults.double(forKey: "Ounces")
@@ -58,12 +65,23 @@ class BAC {
         } else {
             defaults.set(startTime, forKey: "StartTime")
         }
-        
         if (defaults.object(forKey: "Ounces") != nil) {
             A = defaults.double(forKey: "Ounces")
         } else {
             A = 0.0
             defaults.set(0.0, forKey: "Ounces")
+        }
+        if (defaults.object(forKey: "Gender") != nil) {
+            gender = defaults.integer(forKey: "Gender")
+        } else {
+            gender = 0
+            defaults.set(0, forKey: "Gender")
+        }
+        if (defaults.object(forKey: "Weight") != nil) {
+            W = defaults.double(forKey: "Weight")
+        } else {
+            W = 140.0
+            defaults.set(140.0, forKey: "Weight")
         }
         
         
