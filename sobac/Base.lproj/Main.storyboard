@@ -853,6 +853,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-ou-jKn">
                                 <rect key="frame" x="67" y="153" width="241" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hgc-ou-jKn" secondAttribute="height" multiplier="241:30" id="fNR-Dp-6E5"/>
                                 </constraints>
@@ -910,6 +911,7 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Dit-RG-Nd8" appends="YES" id="lQX-K8-vum"/>
+                            <outletCollection property="gestureRecognizers" destination="CWD-J1-Tjg" appends="YES" id="3kz-KT-RhO"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="o1q-mH-zHi"/>
@@ -926,6 +928,11 @@
                         <segue destination="Pgw-5y-Lh4" kind="unwind" unwindAction="done:" id="J1Q-bM-V5e"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="CWD-J1-Tjg">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="4w3-Wj-3Qi" id="eNi-Kf-Lb1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1199.2" y="-794.75262368815595"/>
         </scene>

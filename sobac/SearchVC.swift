@@ -34,6 +34,10 @@ class SearchVC: UIViewController {
         
     }
     
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        searchTextLabel.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
