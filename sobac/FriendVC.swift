@@ -15,9 +15,18 @@ class FriendVC: UIViewController {
     @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var CircleProgression: CircleProgressView!
     
+    var name: String!
+    var limit: String!
+    var percentage: String!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameLabel.text = name
+        BAClimitLabel.text = limit
+        percentageLabel.text = percentage + "%"
+        CircleProgression.progress = Double(percentage)!/Double(limit)!
+        
         // Do any additional setup after loading the view.
     }
 
