@@ -679,7 +679,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonClick:" destination="PHV-Nm-BT4" eventType="touchUpInside" id="3yd-fo-bW0"/>
+                                    <segue destination="cbp-wJ-zvQ" kind="unwind" unwindAction="backToSearch:" id="klB-If-yGH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -702,6 +702,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyN-Ma-gDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cbp-wJ-zvQ" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="uWG-6Y-clE"/>
             </objects>
             <point key="canvasLocation" x="-194.40000000000001" y="-1531.4842578710645"/>

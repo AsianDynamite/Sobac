@@ -41,8 +41,7 @@ class frontVC: UIViewController {
         }
         
         currentBAC.calcBAC()
-        
-        
+
         if(limit > 0.0) {
             let progress = currentBAC.bloodAlcoholContent / limit
             if(progress < 0.5) {
@@ -55,9 +54,9 @@ class frontVC: UIViewController {
                 progressCircle.progress = progress
                 progressCircle.trackFillColor = UIColor.red
             } else {
+                progressCircle.trackFillColor = UIColor.red
                 progressCircle.progress = 1.0
             }
-            print(progress)
             bacPercentLabel.text = formatter.string(for: currentBAC.bloodAlcoholContent)! + "%"
         } else {
             progressCircle.progress = 0.0

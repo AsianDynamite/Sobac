@@ -19,6 +19,10 @@ class CocktailTableVC: UITableViewController, URLSessionDelegate, URLSessionDown
     var row : Int = 0
     var jsonPath : String!
     
+    @IBAction func backToSearch(_ segue: UIStoryboardSegue!) {
+        
+    }
+    
     func urlSession(_ session : URLSession, downloadTask : URLSessionDownloadTask, didFinishDownloadingTo location : URL){
         do{
             let data = try Data(contentsOf: location)
@@ -98,6 +102,18 @@ class CocktailTableVC: UITableViewController, URLSessionDelegate, URLSessionDown
         } else if(ingredientSearch!){
             jsonPath = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + searchString!
         }
+        
+        var newJSONPath = ""
+        for c in jsonPath.characters {
+            
+            if(c == " "){
+                newJSONPath += "%20"
+            } else {
+                newJSONPath += String(c)
+            }
+        }
+        
+        jsonPath = newJSONPath
         
         let url = URL(string: jsonPath)
         let config = URLSessionConfiguration.default
