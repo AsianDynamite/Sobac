@@ -35,6 +35,10 @@ class FriendTableVC: UITableViewController {
         
     }
     
+    @IBAction func backToFriends(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -109,12 +113,14 @@ class FriendTableVC: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = (segue.destination as! FriendVC)
-        let friendsRepo = FriendRepository.sharedInstance
+        if segue.identifier == "FriendTableSegue"{
+            let dest = (segue.destination as! FriendVC)
+            let friendsRepo = FriendRepository.sharedInstance
 
-        dest.name = friendsRepo.friendsArray[row].name
-        dest.limit = friendsRepo.friendsArray[row].limitBAC
-        dest.percentage = friendsRepo.friendsArray[row].currentBAC
+            dest.name = friendsRepo.friendsArray[row].name
+            dest.limit = friendsRepo.friendsArray[row].limitBAC
+            dest.percentage = friendsRepo.friendsArray[row].currentBAC
+        }
     }
     
     
