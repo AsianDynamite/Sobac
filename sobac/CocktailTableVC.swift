@@ -73,9 +73,7 @@ class CocktailTableVC: UITableViewController, URLSessionDelegate, URLSessionDown
                     
                 myOp.completionBlock = {
                     OperationQueue.main.addOperation ({
-                        if let image = myOp.myImage{
-                            self.drinkImages[myOp.index] = image
-                        }
+                        self.drinkImages[myOp.index] = myOp.myImage
                         self.tableView.reloadData()
                     })
                 }
