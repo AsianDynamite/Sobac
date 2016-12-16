@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D1C1A9C1DDD48960095E2A9 /* bacKVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C1A9B1DDD48960095E2A9 /* bacKVO.swift */; };
 		3D2026DA1DDBA4B2003987B4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */; };
+		3D3F52EE1E0480C300AC6391 /* icon Set in Resources */ = {isa = PBXBuildFile; fileRef = 3D3F52ED1E0480C300AC6391 /* icon Set */; };
 		3D4DC3651DD6AFB200FD6DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */; };
 		3D4DC36A1DD6AFB200FD6DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DC3681DD6AFB200FD6DC3 /* Main.storyboard */; };
 		3D4DC36C1DD6AFB200FD6DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DC36B1DD6AFB200FD6DC3 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		3D1C1A9B1DDD48960095E2A9 /* bacKVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bacKVO.swift; sourceTree = "<group>"; };
 		3D2026D91DDBA4B2003987B4 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		3D3F52ED1E0480C300AC6391 /* icon Set */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "icon Set"; sourceTree = "<group>"; };
 		3D4DC3611DD6AFB200FD6DC3 /* sobac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sobac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4DC3641DD6AFB200FD6DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4DC3691DD6AFB200FD6DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		3D4DC3631DD6AFB200FD6DC3 /* sobac */ = {
 			isa = PBXGroup;
 			children = (
+				3D3F52ED1E0480C300AC6391 /* icon Set */,
 				E84916441DDC27370092A025 /* drinks.jpg */,
 				E849163F1DDC02850092A025 /* FriendView */,
 				E849163D1DDC02330092A025 /* Repositories */,
@@ -357,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3F52EE1E0480C300AC6391 /* icon Set in Resources */,
 				E84916451DDC27370092A025 /* drinks.jpg in Resources */,
 				3D4DC36F1DD6AFB200FD6DC3 /* LaunchScreen.storyboard in Resources */,
 				3D4DC36C1DD6AFB200FD6DC3 /* Assets.xcassets in Resources */,

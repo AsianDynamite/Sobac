@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 class BAC: NSObject {
     //Widmark's Formula
@@ -93,6 +94,20 @@ class BAC: NSObject {
         
         bloodAlcoholContent = (A * 5.14 / W * r[gender]) - 0.015 * hourPassed
         if(bloodAlcoholContent <= 0.0) {
+            let note = UNMutableNotificationContent()
+            note.title = "BAC Update"
+            note.categoryIdentifier = "testCat"
+            note.body = "Your BAC is at Zero"
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+            let request = UNNotificationRequest(identifier: "testnote", content: note, trigger: trigger)
+            let center = UNUserNotificationCenter.current()
+            center.add(request, withCompletionHandler: {
+                (error) in
+                if error != nil {
+                    print("NOTIFICATION ERROR")
+                }
+            })
+            
             bloodAlcoholContent = 0.0
             A = 0.0
             defaults.set(0.0, forKey: "Ounces")

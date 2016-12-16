@@ -7,15 +7,39 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
 
     var window: UIWindow?
-
-
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("Will Present")
+        completionHandler([.alert, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("Did Receive")
+        completionHandler()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let center = UNUserNotificationCenter.current()
+        let category = UNNotificationCategory(identifier: "testCat", actions: [], intentIdentifiers: [], options: [])
+        center.setNotificationCategories([category])
+        
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        center.requestAuthorization(options: options, completionHandler: {
+            (granted, error) in
+            if !granted {
+                print("ERROROROROROROR")
+            }
+        })
+        
+        center.delegate = self
+        
         return true
     }
 

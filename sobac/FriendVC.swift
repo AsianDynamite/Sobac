@@ -18,7 +18,6 @@ class FriendVC: UIViewController {
     var name: String!
     var limit: String!
     var percentage: String!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
