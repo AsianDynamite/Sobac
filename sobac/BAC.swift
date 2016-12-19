@@ -98,7 +98,7 @@ class BAC: NSObject {
             note.title = "BAC Update"
             note.categoryIdentifier = "testCat"
             note.body = "Your BAC is at Zero"
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
             let request = UNNotificationRequest(identifier: "testnote", content: note, trigger: trigger)
             let center = UNUserNotificationCenter.current()
             center.add(request, withCompletionHandler: {
