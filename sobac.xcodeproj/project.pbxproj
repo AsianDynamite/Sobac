@@ -38,6 +38,10 @@
 		E84916411DDC087E0092A025 /* drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916401DDC087E0092A025 /* drinks.swift */; };
 		E84916431DDC0F5E0092A025 /* TestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84916421DDC0F5E0092A025 /* TestOperation.swift */; };
 		E84916451DDC27370092A025 /* drinks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E84916441DDC27370092A025 /* drinks.jpg */; };
+		E8E31BC71E08A6640059F085 /* DrewH.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8E31BC61E08A6640059F085 /* DrewH.jpg */; };
+		E8E31BC91E08A6740059F085 /* NateH.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8E31BC81E08A6740059F085 /* NateH.jpg */; };
+		E8E31BCB1E08A6900059F085 /* DanP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8E31BCA1E08A6900059F085 /* DanP.jpg */; };
+		E8E31BCD1E08AA140059F085 /* drinkCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E31BCC1E08AA140059F085 /* drinkCalculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,10 @@
 		E84916401DDC087E0092A025 /* drinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinks.swift; sourceTree = "<group>"; };
 		E84916421DDC0F5E0092A025 /* TestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOperation.swift; sourceTree = "<group>"; };
 		E84916441DDC27370092A025 /* drinks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drinks.jpg; path = ../drinks.jpg; sourceTree = "<group>"; };
+		E8E31BC61E08A6640059F085 /* DrewH.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DrewH.jpg; sourceTree = "<group>"; };
+		E8E31BC81E08A6740059F085 /* NateH.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NateH.jpg; sourceTree = "<group>"; };
+		E8E31BCA1E08A6900059F085 /* DanP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DanP.jpg; path = "icon Set/DanP.jpg"; sourceTree = "<group>"; };
+		E8E31BCC1E08AA140059F085 /* drinkCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkCalculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,9 @@
 			children = (
 				3D3F52ED1E0480C300AC6391 /* icon Set */,
 				E84916441DDC27370092A025 /* drinks.jpg */,
+				E8E31BC81E08A6740059F085 /* NateH.jpg */,
+				E8E31BCA1E08A6900059F085 /* DanP.jpg */,
+				E8E31BC61E08A6640059F085 /* DrewH.jpg */,
 				E849163F1DDC02850092A025 /* FriendView */,
 				E849163D1DDC02330092A025 /* Repositories */,
 				3DCA43B21DD9586700F78340 /* FrontPage */,
@@ -158,6 +169,7 @@
 				3D4DC3681DD6AFB200FD6DC3 /* Main.storyboard */,
 				3D4DC36B1DD6AFB200FD6DC3 /* Assets.xcassets */,
 				3D4DC36D1DD6AFB200FD6DC3 /* LaunchScreen.storyboard */,
+				E8E31BCC1E08AA140059F085 /* drinkCalculation.swift */,
 				3D4DC3701DD6AFB200FD6DC3 /* Info.plist */,
 			);
 			path = sobac;
@@ -321,6 +333,7 @@
 				TargetAttributes = {
 					3D4DC3601DD6AFB100FD6DC3 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8Z3939H5C3;
 						ProvisioningStyle = Automatic;
 					};
 					3D4DC3741DD6AFB200FD6DC3 = {
@@ -330,6 +343,7 @@
 					};
 					3D4DC37F1DD6AFB200FD6DC3 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8Z3939H5C3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3D4DC3601DD6AFB100FD6DC3;
 					};
@@ -362,8 +376,11 @@
 			files = (
 				3D3F52EE1E0480C300AC6391 /* icon Set in Resources */,
 				E84916451DDC27370092A025 /* drinks.jpg in Resources */,
+				E8E31BCB1E08A6900059F085 /* DanP.jpg in Resources */,
+				E8E31BC71E08A6640059F085 /* DrewH.jpg in Resources */,
 				3D4DC36F1DD6AFB200FD6DC3 /* LaunchScreen.storyboard in Resources */,
 				3D4DC36C1DD6AFB200FD6DC3 /* Assets.xcassets in Resources */,
+				E8E31BC91E08A6740059F085 /* NateH.jpg in Resources */,
 				3D4DC36A1DD6AFB200FD6DC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +414,7 @@
 				3D1C1A9C1DDD48960095E2A9 /* bacKVO.swift in Sources */,
 				3D4DC3A31DD926B500FD6DC3 /* FriendTableVC.swift in Sources */,
 				3D4DC3A51DD926CD00FD6DC3 /* FriendCell.swift in Sources */,
+				E8E31BCD1E08AA140059F085 /* drinkCalculation.swift in Sources */,
 				3DCA43B41DD9670D00F78340 /* upSegue.swift in Sources */,
 				E849163C1DDC02270092A025 /* FriendVC.swift in Sources */,
 				E849163A1DDC02180092A025 /* FriendClass.swift in Sources */,
@@ -564,8 +582,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Z3939H5C3;
 				INFOPLIST_FILE = sobac/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PorterDJ1.sobac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,8 +596,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Z3939H5C3;
 				INFOPLIST_FILE = sobac/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PorterDJ1.sobac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -620,8 +640,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8Z3939H5C3;
 				INFOPLIST_FILE = sobacUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PorterDJ1.sobacUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -634,8 +655,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8Z3939H5C3;
 				INFOPLIST_FILE = sobacUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PorterDJ1.sobacUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

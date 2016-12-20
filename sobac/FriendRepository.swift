@@ -70,6 +70,8 @@ class FriendRepository {
     func addFriend(newFriend: Friend){
         for friend in friendsArray{
             if(newFriend.name == friend.name){
+                friend.currentBAC = newFriend.currentBAC
+                friend.limitBAC = newFriend.limitBAC
                 return
             }
         }

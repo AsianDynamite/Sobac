@@ -19,7 +19,7 @@ class FriendTableVC: UITableViewController {
         
         let friend1 = Friend(name: "Dan",limitBAC: "0.25",currentBAC: "0.27",personalImage: "Danp.jpg")
         let friend2 = Friend(name: "Nate",limitBAC: "0.10",currentBAC: "0.05",personalImage: "NateH.jpg")
-        let friend3 = Friend(name: "Drew",limitBAC: "0.08",currentBAC: "0.03",personalImage:  "DrewH.jpg")
+        let friend3 = Friend(name: "Drew",limitBAC: "0.08",currentBAC: "0.11",personalImage:  "DrewH.jpg")
         
         friendsRepo.addFriend(newFriend: friend1)
         friendsRepo.addFriend(newFriend: friend2)

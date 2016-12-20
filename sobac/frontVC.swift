@@ -78,7 +78,7 @@ class frontVC: UIViewController {
             
             limitText.text = "Limit: " + formatter.string(for: child.limit)! + "%"
             viewDidLoad()
-        } else if(segue.identifier == "returnFromAdding") {
+        } else if(segue.identifier == "returnFromAdding" || segue.identifier == "searchDone") {
             viewDidLoad()
         }
     }

@@ -24,10 +24,19 @@ class FriendVC: UIViewController {
         nameLabel.text = name
         BAClimitLabel.text = limit
         percentageLabel.text = percentage + "%"
-        if Double(percentage)! < Double(limit)! {
-            CircleProgression.progress = Double(percentage)!/Double(limit)!
-        }else {
+        let progress = Double(percentage)! / Double(limit)!
+        if (progress < 0.5){
+            CircleProgression.progress = progress
+            CircleProgression.trackFillColor = UIColor.green
+        }else if (progress < 0.8){
+            CircleProgression.progress = progress
+            CircleProgression.trackFillColor = UIColor.yellow
+        }else if (progress < 1.0){
+            CircleProgression.progress = progress
+            CircleProgression.trackFillColor = UIColor.red
+        } else {
             CircleProgression.progress = 1.0
+            CircleProgression.trackFillColor = UIColor.red
         }
         
         // Do any additional setup after loading the view.
