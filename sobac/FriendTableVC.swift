@@ -11,6 +11,11 @@ import UIKit
 class FriendTableVC: UITableViewController {
     
     var row = 0
+    let alertController = UIAlertController(title: "Add Friend", message: "Enter Username:", preferredStyle: .alert)
+    
+    @IBAction func addFriendPress(_ sender: Any) {
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +37,25 @@ class FriendTableVC: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
+            /*if field == alertController.textFields![0] as UITextField {
+                // store your data
+                UserDefaults.standard.setObject(field.text, forKey: "userEmail")
+                UserDefaults.standard.synchronize()
+            } else {
+                // user did not fill field
+            }*/
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Username"
+        }
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
         
     }
     
