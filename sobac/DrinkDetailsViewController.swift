@@ -14,7 +14,7 @@ class DrinkDetailsViewController: UIViewController, drinkCalc, UIWebViewDelegate
     var activityIndicator = UIActivityIndicatorView()
 
     @IBOutlet weak var drinkWebView: UIWebView!
-    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBAction func backButtonClick(_ sender: AnyObject) {
     }
     
@@ -46,17 +46,17 @@ class DrinkDetailsViewController: UIViewController, drinkCalc, UIWebViewDelegate
 
         // Do any additional setup after loading the view.
         let url = URL(string: "http://www.thecocktaildb.com/drink.php?c=" + drinkID!)
+        drinkWebView.delegate = self
         let request = URLRequest(url : url!)
         drinkWebView.loadRequest(request)
-        //activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        //activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        //activityIndicator.startAnimating()
+        
+        indicator.hidesWhenStopped = true
+        
     }
     
-    //func webViewDidFinishLoad(webView : UIWebView) {
-        //UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        //activityIndicator.stopAnimating()
-    //}
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        indicator.stopAnimating()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
